@@ -1,12 +1,12 @@
 from crypt import methods
 import json
-from flask import Flask, jsonify
+from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/', methods = ['GET'])
+@app.route('/')
 def hello():
-    return jsonify({'data': 'Hello World from Flask'})
+    return "Hello Wolrd from Flask"
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(host="0.0.0.0", port=5000)
